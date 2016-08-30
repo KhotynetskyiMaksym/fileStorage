@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: Maksym
- * Date: 11.07.2016
- * Time: 17:16
- */
 class UserController
 {
     public function actionRegister()
@@ -77,6 +71,7 @@ class UserController
         return true;
 
     }
+
     public function actionLogout()
     {
         unset($_SESSION['user']);

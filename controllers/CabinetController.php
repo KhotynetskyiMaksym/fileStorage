@@ -79,6 +79,7 @@ class CabinetController
         require_once(ROOT . '/views/cabinet/upload.php');
         return true;
     }
+
     public function actionList()
     {
         $userId = User::checkLogged();
@@ -96,6 +97,7 @@ class CabinetController
 
         header('Location: /cabinet/list/');
     }
+
     public function actionDownload($id)
     {
         $userId = User::checkLogged();

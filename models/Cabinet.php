@@ -36,9 +36,7 @@ class Cabinet
 
     public static function saveData($userId, $filename, $upload_path, $ext)
     {
-        // Соединение с БД
         $db = Db::getConnection();
-        // Текст запроса к БД
         $size = filesize($upload_path . $filename);
         $type = substr($ext, 1);
 
@@ -55,9 +53,8 @@ class Cabinet
 
     public static function getloadedList($userId)
     {
-        // Соединение с БД
         $db = Db::getConnection();
-        // Получение и возврат результатов
+
         $result = $db->query('SELECT id, name, type, size, date, path FROM upload '
                             . 'WHERE user_id = ' . $userId
                             . ' ORDER BY name');

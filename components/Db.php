@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: Maksym
- * Date: 24.06.2016
- * Time: 1:57
- */
 class Db
 {
     public static function getConnection()
